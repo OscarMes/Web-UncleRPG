@@ -6,10 +6,12 @@
     <!-- - -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar</title>
+    <title>UncleRPG</title>
     <link rel="stylesheet" href="{% static 'unclewebapp/css/style_navbar.css' %}">
     <link rel="stylesheet" href="{% static 'unclewebapp/css/style_footer.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+
 </head>
 <body>
     <!-- Aquí comienza la barra de navegación -->
@@ -19,7 +21,7 @@
         </div>
     <nav class="shadow">
         <ul class="nav-links">
-            <li><a href="#">Inicio</a></li>
+            <li><a href="{% url 'inicio' %}">Inicio</a></li>
             <li><a href="#">Unity</a></li>
             <li><a href="#">RPGmaker</a></li>
             <li><a href="#">Debate</a></li>
@@ -27,6 +29,13 @@
     </nav>
     </header>
     <!-- fin barra de navegación -->
+
+    <!-- el contenido de esta zona cambia -->
+    {% block content %}
+
+    {% endblock %}
+    <!-- fin de contenido cambiante -->
+
 
     <!-- Aquí comienza el pie de la página  -->
     <footer class="footer">
@@ -50,7 +59,7 @@
         </div>
 
     </footer>
-    <!-- - -->
+    <!-- fin del pie de página -->
 
 </body>
 </html>

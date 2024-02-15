@@ -1,0 +1,58 @@
+
+  /* realizo las vistas en formato de cartas */
+/* *{
+    background-color: #161f2f;
+} */
+
+body{
+  background-color: #a0adc3;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+  .box-container-2 {
+    margin: 35px 35px 35px 35px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px; /* Espacio entre los elementos */
+
+  }
+  
+  .box-container-2 .box {
+    width: 100%; /* Ajusta el ancho de cada caja al 100% del contenedor */
+    background-color: #161f2f; /* Ajusta el color de fondo de la tarjeta */
+    border-radius: 10px; /* Redondea las esquinas de la tarjeta */
+  }
+  
+  .box-container-2 .content {
+    text-align: center; /* Centra el contenido */
+
+  }
+  
+  .box-container-2 img {
+    max-width: 100%; /* Ajusta la imagen para que no exceda el ancho del contenedor */
+    border-radius: 10px 10px 10px 10px; 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+ .box-container-2 .content h3{
+    position: relative;
+    bottom:  50px;
+    width: 100%;
+    height: 0px;
+    line-height: 25px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .4);
+
+    text-align: center;
+    border-radius: 0 0 10px 10px ;
+    background-size: cover;
+    box-shadow: 0 -10px 50px rgba(0, 0, 0, .6); 
+ }
+  

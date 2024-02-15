@@ -3,10 +3,9 @@ from django.http import HttpResponse
 
 # Create your views here.
 
-def fnt_hola(request):
+def fnt_inicio(request):
 
-    return render(request, 'unclewebapp/navbar/base.html')
+    return render(request, 'unclewebapp/inicio.html')
 
-def fnt_ejemplo(request):
-
-    return HttpResponse('Ejemplo')
+def fnt_juego1(request):
+    return render(request, 'unclewebapp/juego1.html')

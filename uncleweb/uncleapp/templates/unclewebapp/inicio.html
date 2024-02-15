@@ -1,0 +1,53 @@
+{% extends "unclewebapp/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'unclewebapp/css/style_inicio.css' %}">
+<section class="game_container">
+    <div class="box-container-2">
+        <a href="{% url 'juego1' %}">
+            <div class="box">
+                <div class="content">
+                    <img src="{% static 'unclewebapp/img/juego1.png' %}" alt="">
+                    <h3>Valorant</h3>
+                </div>
+            </div>
+        </a>
+            <div class="box">
+                <div class="content">
+                    <img src="{% static 'unclewebapp/img/juego1.png' %}" alt="">
+                    <h3>Valorant</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="content">
+                    <img src="{% static 'unclewebapp/img/juego1.png' %}" alt="">
+                    <h3>Valorant</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="content">
+                    <img src="{% static 'unclewebapp/img/juego1.png' %}" alt="">
+                    <h3>Valorant</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="content">
+                    <img src="{% static 'unclewebapp/img/juego2.png' %}" alt="">
+                    <h3>Stardew valley</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="content">
+                    <img src="{% static 'unclewebapp/img/juego1.png' %}" alt="">
+                    <h3>Valorant</h3>
+                </div>
+            </div>
+    </div>
+</section>
+
+
+
+
+{% endblock %}
