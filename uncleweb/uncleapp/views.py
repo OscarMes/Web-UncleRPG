@@ -8,4 +8,4 @@ def fnt_inicio(request):
     return render(request, 'unclewebapp/inicio.html')
 
 def fnt_juego1(request):
-    return render(request, 'unclewebapp/juego1.html')
+    return render(request, 'unclewebapp/detalle.html')

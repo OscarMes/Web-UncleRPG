@@ -72,6 +72,8 @@ body{
     border-radius: 6px; /* Agregamos borde redondeado */
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5); /* Ajustamos los valores de desplazamiento */
 }
+
+
 /* 
 .shadow{
     position: relative;
