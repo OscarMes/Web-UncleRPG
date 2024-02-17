@@ -5,14 +5,13 @@
 <link rel="stylesheet" href="{%static 'unclewebapp\css\style_detalle.css' %}">
 
 <main>
-
-
     <div class="box_img">
-        <img src="{% static 'unclewebapp/img/juego1.png' %}" alt="">
+        <img src="{% static 'unclewebapp/img/juego1.png' %}" 
+        alt="imagen-juego">
     </div>
     <div class="box_info">
         <div class="box_name">
-        <h1>Nombre del juego </h1>
+        Nombre del juego
         </div>
         <div class="box_sinopsis">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
@@ -24,6 +23,16 @@
             sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
             mollit anim id est laborum.
         </div>
+
+        <div class="box_download">
+            <a href="#">
+                <div class="btn_download">
+                    Descargar
+                    <img src="{% static 'unclewebapp/img/descargar.png' %}" 
+                    alt="imagen-juego">
+                </div>
+            </a>
+        </div>  
     </div>
 
 
