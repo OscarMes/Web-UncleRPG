@@ -19,7 +19,6 @@ a {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px; /* Espacio entre los elementos */
-
   }
   
   .box {
@@ -27,6 +26,8 @@ a {
     width: 100%; /* Ajusta el ancho de cada caja al 100% del contenedor */
     background-color: #161f2f; /* Ajusta el color de fondo de la tarjeta */
     border-radius: 10px; /* Redondea las esquinas de la tarjeta */
+    max-width: 250px;
+    max-height: 501px;
   }
   
   .box .content {
@@ -56,4 +57,3 @@ a {
     background-size: cover;
     box-shadow: 0 -10px 50px rgba(0, 0, 0, .4); 
  }
-  

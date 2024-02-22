@@ -6,30 +6,25 @@
 
 <main>
     <div class="box_img">
-        <img src="{% static 'unclewebapp/img/juego1.png' %}" 
-        alt="imagen-juego">
+        <img src="{{id.imagen.url}}" 
+        alt="{{id.nombre}}">
     </div>
     <div class="box_info">
         <div class="box_name">
-        Nombre del juego
+            {{ id.nombre }}
         </div>
         <div class="box_sinopsis">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna 
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate velit 
-            esse cillum dolore eu fugiat nulla pariatur. 
-            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-            mollit anim id est laborum.
+            {{ id.sinopsis}}
         </div>
 
         <div class="box_download">
-            <a href="#">
+            <a href="{{id.url_descargar}}">
                 <div class="btn_download">
-                    Descargar
-                    <img src="{% static 'unclewebapp/img/descargar.png' %}" 
-                    alt="imagen-juego">
+                Descargar
+
+                <img src="{% static 'unclewebapp/img/descargar.png' %}" 
+                alt="imagen-juego">
+
                 </div>
             </a>
         </div>  

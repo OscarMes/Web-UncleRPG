@@ -2,7 +2,9 @@ from django.urls import path
 from uncleapp import views
 
 
+app_name = 'cursor'
+
 urlpatterns = [
     path('', views.fnt_inicio,name="inicio" ),
-    path('juego1/', views.fnt_juego1, name='juego1')
+    path('detalle/<int:id>', views.fnt_detalle, name='detalle'),
 ]

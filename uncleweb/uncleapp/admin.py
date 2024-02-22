@@ -1,3 +1,4 @@
 from django.contrib import admin
+from .models import Cls_juegos
 
-# Register your models here.
+admin.site.register(Cls_juegos)
