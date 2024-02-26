@@ -6,19 +6,19 @@
 
 <main>
     <div class="box_img">
-        <img src="{{id.imagen.url}}" 
+        <img src="{{detalle_juego.imagen.url}}" 
         alt="{{id.nombre}}">
     </div>
     <div class="box_info">
         <div class="box_name">
-            {{ id.nombre }}
+            {{ detalle_juego.nombre }}
         </div>
         <div class="box_sinopsis">
-            {{ id.sinopsis}}
+            {{ detalle_juego.sinopsis}}
         </div>
 
         <div class="box_download">
-            <a href="{{id.url_descargar}}">
+            <a href="{{detalle_juego.url_descargar}}"  target="_blank">
                 <div class="btn_download">
                 Descargar
 

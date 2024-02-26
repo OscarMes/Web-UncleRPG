@@ -6,5 +6,5 @@ app_name = 'cursor'
 
 urlpatterns = [
     path('', views.fnt_inicio,name="inicio" ),
-    path('detalle/<int:id>', views.fnt_detalle, name='detalle'),
+    path('detalle/<str:nombre>', views.fnt_detalle, name='detalle'),
 ]

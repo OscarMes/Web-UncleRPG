@@ -6,12 +6,37 @@
 
 body{
   background-color: #161f2f;
-  font-family: sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 a {
   text-decoration: none;
 }
+
+  .box-container-1{
+    margin: 35px 35px 35px 35px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px; /* Espacio entre los elementos */
+  }
+
+  .box-3-popular-1 img{
+    max-width: 100%; 
+    border-radius: 10px 10px 10px 10px; 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .box-3-popular-2-3 img{
+    max-width: 100%; 
+    border-radius: 10px 10px 10px 10px; 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 3px;
+  }
+
 
 
   .box-container-2 {
@@ -57,3 +82,43 @@ a {
     background-size: cover;
     box-shadow: 0 -10px 50px rgba(0, 0, 0, .4); 
  }
+
+ @media only screen and (max-width: 900px) {
+
+
+    .box-container-2 {
+      margin: 3.5vw;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1vw; /* Espacio entre los elementos */
+    }
+
+    .box{
+      max-width: 125vw;
+      max-height: 250.5vh;
+    }
+
+    .box .content h3 {
+      font-size: 1vw; /* Utilizando vw para un tamaño de fuente relativo al ancho de la vista */
+    }
+
+  }
+
+  @media only screen and (max-width: 767px)
+  {
+    .box-container-2 {
+      margin: 3.5vw;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1vw; /* Espacio entre los elementos */
+    }
+
+    .box{
+      max-width: 125vw;
+      max-height: 250.5vh;
+    }
+
+    .box .content h3 {
+      font-size: 2vw; /* Utilizando vw para un tamaño de fuente relativo al ancho de la vista */
+    }
+  }

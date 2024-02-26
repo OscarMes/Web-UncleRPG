@@ -6,9 +6,28 @@
 <link rel="stylesheet" href="{% static 'unclewebapp/css/style_inicio.css' %}">
 <section class="game_container">
     
+    <div class="box-container-1">
+        
+            <div class="box-3-popular-1">
+                <img src="{% static 'unclewebapp/img/popular1.png' %}" alt="">
+            </div>
+
+            <div class="box-3-popular-2-3">
+                <div class="box-3-popular-2">
+                    <img src="{% static 'unclewebapp/img/popular2.png' %}" alt="">
+                </div>
+                <div class="box-container-3">
+                    <img src="{% static 'unclewebapp/img/popular3.png' %}" alt="">
+                </div>
+            </div>
+            
+      
+    </div>
+
     <div class="box-container-2">
+        <!-- bucle for para mostrar el contenido de la base de datos -->
         {% for juego in juegos %}
-        <a href="{% url 'cursor:detalle' juego.id %}">
+        <a href="{% url 'cursor:detalle' juego.nombre %}">
             <div class="box">
                 <div class="content">
                     <img src="{{ juego.imagen.url}}" alt="{{ juego.nombre}}">
@@ -17,8 +36,10 @@
             </div>
         </a> 
         {% endfor %}    
-    </div>
-    
+        
+
+       
+    </div>   
 </section>
 
 

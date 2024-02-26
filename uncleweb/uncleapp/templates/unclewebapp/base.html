@@ -16,17 +16,29 @@
 <body>
     <!-- Aquí comienza la barra de navegación -->
     <header class="header">
+        <a href="{% url 'cursor:inicio' %}">
         <div class="logo">
             <img src="{% static 'unclewebapp/img/logouncle.png' %}" alt="uncle logo">
+        </a>
         </div>
-    <nav class="shadow">
-        <ul class="nav-links">
-            <li><a href="{% url 'cursor:inicio' %}">Inicio</a></li>
-            <li><a href="#">Unity</a></li>
-            <li><a href="#">RPGmaker</a></li>
-            <li><a href="#">Debate</a></li>
-        </ul>
-    </nav>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul class="nav-links">
+                <li>
+                    <a href="{% url 'cursor:inicio' %}" class="active">Inicio</a>
+                </li>
+                <li>
+                    <a href="#">Unity</a>
+                </li>
+                <li>
+                    <a href="#">RPGmaker</a>
+                </li>
+            </ul>
+        </nav>
     </header>
     <!-- fin barra de navegación -->
 
@@ -60,6 +72,8 @@
 
     </footer>
     <!-- fin del pie de página -->
+
+<script src="{% static 'unclewebapp/js/script_navbar.js' %}"></script>
 
 </body>
 </html>

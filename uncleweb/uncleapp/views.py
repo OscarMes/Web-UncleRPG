@@ -6,11 +6,11 @@ from .models import Cls_juegos
 # Create your views here.
 
 def fnt_inicio(request):
-    juegos = Cls_juegos.objects.all()
+    carta_juego = Cls_juegos.objects.all()
 
-    return render(request, 'unclewebapp/inicio.html', {'juegos' : juegos})
+    return render(request, 'unclewebapp/inicio.html', {'juegos' : carta_juego})
 
-def fnt_detalle(request, id):
-    juego = get_object_or_404(Cls_juegos, pk=id)
+def fnt_detalle(request, nombre):
+    detalle_juego = get_object_or_404(Cls_juegos, nombre=nombre)
   
-    return render(request, 'unclewebapp/detalle.html', {'id': juego})
+    return render(request, 'unclewebapp/detalle.html', {'detalle_juego': detalle_juego})
