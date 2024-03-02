@@ -14,3 +14,7 @@ def fnt_detalle(request, nombre):
     detalle_juego = get_object_or_404(Cls_juegos, nombre=nombre)
   
     return render(request, 'unclewebapp/detalle.html', {'detalle_juego': detalle_juego})
+
+def fnt_unity(request):
+
+    return render(request,'unclewebapp/unity.html' )

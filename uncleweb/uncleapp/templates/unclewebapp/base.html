@@ -1,3 +1,10 @@
+<!-- en Django para realizar los active links
+se debe traer el nombre de las páginas  -->
+
+{% url 'cursor:inicio' as inicio %}
+{% url 'cursor:unity' as unity %}
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -29,14 +36,16 @@
         <nav class="nav-bar">
             <ul class="nav-links">
                 <li>
-                    <a href="{% url 'cursor:inicio' %}" class="active">Inicio</a>
+                    <!-- se debe crear una clase de tipo nav-link y un condicional 
+                    el 'active' se puede personalizar en CSS -->
+                    <a class="nav-link  {% if request.path == inicio %} active {% endif %}" href="{% url 'cursor:inicio' %}" >Inicio</a>
                 </li>
                 <li>
-                    <a href="#">Unity</a>
+                    <a class="nav-link  {% if request.path == unity %} active {% endif %}" href="{% url 'cursor:unity' %}">Unity</a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="#">RPGmaker</a>
-                </li>
+                </li> -->
             </ul>
         </nav>
     </header>
