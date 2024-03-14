@@ -3,6 +3,7 @@ se debe traer el nombre de las páginas  -->
 
 {% url 'cursor:inicio' as inicio %}
 {% url 'cursor:unity' as unity %}
+{% url 'cursor:rpgmaker' as rpgmaker %}
 
 
 <!DOCTYPE html>
@@ -17,6 +18,7 @@ se debe traer el nombre de las páginas  -->
     <link rel="stylesheet" href="{%static 'unclewebapp\css\reset.css' %}">
     <link rel="stylesheet" href="{% static 'unclewebapp/css/style_navbar.css' %}">
     <link rel="stylesheet" href="{% static 'unclewebapp/css/style_footer.css' %}">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
 
@@ -44,9 +46,9 @@ se debe traer el nombre de las páginas  -->
                 <li>
                     <a class="nav-link  {% if request.path == unity %} active {% endif %}" href="{% url 'cursor:unity' %}">Unity</a>
                 </li>
-                <!-- <li>
-                    <a href="#">RPGmaker</a>
-                </li> -->
+                <li>
+                    <a class="nav-link  {% if request.path == rpgmaker %} active {% endif %}" href="{% url 'cursor:rpgmaker' %}">RPGMaker</a>
+                </li>
             </ul>
         </nav>
     </header>

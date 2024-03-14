@@ -29,8 +29,14 @@ def fnt_detalle(request, nombre):
 
 def fnt_unity(request):
 
-    #consulta los elementos dentro de la tabla juegos cuyo nombre sea (Unity, RPGMaker...)
+    #consulta los elementos dentro de la tabla juegos cuyo nombre sea (Unity)
     #para consultar el nombre de una llave fornea se debe enlazar la llave foranea con el nombre (__)
-    carta_juego_unity = Tbl_juegos.objects.filter(fkidJuegos_idMotor__nombre = 'Unity')
+    carta_juego_unity = Tbl_juegos.objects.filter(fkidJuegos_idMotor__nombre = 'unity')
 
     return render(request,'unclewebapp/unity.html', {'juegos_unity' : carta_juego_unity} )
+
+def fnt_rpgmaker(request):
+
+    carta_juego_rpgmaker = Tbl_juegos.objects.filter(fkidJuegos_idMotor__nombre = 'rpgmaker')
+
+    return render(request, 'unclewebapp/rpgmaker.html', {'juegos_rpgmaker' : carta_juego_rpgmaker})
