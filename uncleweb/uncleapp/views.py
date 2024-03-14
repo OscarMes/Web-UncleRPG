@@ -8,7 +8,9 @@ from .models import Tbl_juegos, Tbl_tres_populares
 # Create your views here.
 
 def fnt_inicio(request):
-    carta_juego = Tbl_juegos.objects.all()
+    #consulta todos los elementos de la tabla juegos ordenados por el
+    #último elemento agregado (-id) y que solo sean diez ([:10])
+    carta_juego = Tbl_juegos.objects.all().order_by('-id')[:10]
     # img_populares = Tbl_tres_populares.objects.all()
     pos_izquierda = Tbl_tres_populares.objects.filter(posicion = 'izquierda').first()
     pos_superior = Tbl_tres_populares.objects.filter(posicion = 'superior').first()
@@ -27,4 +29,8 @@ def fnt_detalle(request, nombre):
 
 def fnt_unity(request):
 
-    return render(request,'unclewebapp/unity.html' )
+    #consulta los elementos dentro de la tabla juegos cuyo nombre sea (Unity, RPGMaker...)
+    #para consultar el nombre de una llave fornea se debe enlazar la llave foranea con el nombre (__)
+    carta_juego_unity = Tbl_juegos.objects.filter(fkidJuegos_idMotor__nombre = 'Unity')
+
+    return render(request,'unclewebapp/unity.html', {'juegos_unity' : carta_juego_unity} )

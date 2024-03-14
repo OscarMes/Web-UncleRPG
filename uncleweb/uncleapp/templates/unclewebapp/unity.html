@@ -2,7 +2,32 @@
 {% load static %}
 {% block content %}
 
-<h1>Soy unity</h1>
+<link rel="stylesheet" href="{%static 'unclewebapp\css\reset.css'%}">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
+<link rel="stylesheet" href="{%static 'unclewebapp\css\reset.css' %}">
+<link rel="stylesheet" href="{% static 'unclewebapp/css/style_inicio.css' %}">
+
+
+<body>
+    
+<div class="game_container">
+
+<div class="box-container-2">
+    <!-- bucle for para mostrar el contenido de la base de datos -->
+    {% for juego in juegos_unity %}
+    <a href="{% url 'cursor:detalle' juego.nombre %}">
+        <div class="box">
+            <div class="content">
+                <img src="{{ juego.img.url}}" alt="{{ juego.nombre }}">
+                <h3>{{juego.nombre}}</h3>
+            </div>
+        </div>
+    </a> 
+    {% endfor %}    
+</div> 
 
 {% endblock %}
+</div>
+</body>
