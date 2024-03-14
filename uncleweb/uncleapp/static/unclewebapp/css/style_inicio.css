@@ -1,114 +1,95 @@
-
-  /* realizo las vistas en formato de cartas */
-/* *{
-    background-color: #161f2f;
-} */
+*{
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
 
 body{
   background-color: #161f2f;
-  font-family: Arial, sans-serif;
 }
 
-a {
+a{
   text-decoration: none;
 }
 
+.game_container{
+  margin: 3vw;
+  /* background-color: blueviolet; */
+}
 
-/* primer contenedor  */
+.box-container-1 {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 1vw;
+}
 
-  .box-container-1{
-    margin: 35px 35px 35px 35px;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1vw;
-    /* background-color: rebeccapurple; */
-  }
+.box-container-1 img {
+  border-radius: 10px;
+  object-fit: cover;
+  max-width: 100%;
+  height: 100%;
+}
 
+.box-3-popular-1 {
+  width: 100%;
+  height: 100%;
+}
 
+.box-3-popular-2-3{
+  display: grid;
+  grid-template-columns: repeat(1,minmax(0,1fr));
+  max-width: 100%;
+  gap: 1vw;
+}
 
-  .box-3-popular-1 {
-    position: relative;
-    width: 100%;
-    /* background-color: beige; */
-    /* max-width: 680px;
-    max-height: 430px; */
-    /* padding: 50px; */
-    
-  }
-  
-  .box-3-popular-2-3 {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-    gap: 1vw;
-    /* padding: 50px; */
-    /* background-color: bisque; */
-  }
+.box-3-popular-2 {
+  width: 100%;
+  height: 100%;
+}
 
-
-  .box-3-popular-2,
-  .box-3-popular-3 {
-    position: relative;
-    /* background-color: beige; */
-    max-width: 680px;
-    max-height: 230px;
-  }
-
-  .box-3-popular-1 img{
-    max-width: 100%; 
-    border-radius: 10px 10px 10px 10px; 
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
- .box-3-popular-2 img,
- .box-3-popular-3 img{
-    max-width: 100%; 
-    border-radius: 10px 10px 10px 10px; 
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+.box-3-popular-3 {
+  width: 100%;
+  height: 100%;
+}
 
 
-
-  
 
 
 
   /* segundo contenedor */
+  /* juegos en cartas */
 
   .box-container-2 {
-    margin: 70px 35px 35px 35px;
+    padding-top: 5vw;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 290vw));
     gap: 20px; /* Espacio entre los elementos */
   }
-  
+
   .box {
     position: relative;
     width: 100%; /* Ajusta el ancho de cada caja al 100% del contenedor */
     background-color: #161f2f; /* Ajusta el color de fondo de la tarjeta */
     border-radius: 10px; /* Redondea las esquinas de la tarjeta */
-    max-width: 250px;
-    max-height: 501px;
+    max-width: 290vw;
+    max-height: 501vw;
   }
-  
+
   .box .content {
     text-align: center; /* Centra el contenido */
 
   }
-  
+
   .box .content img {
     max-width: 100%; /* Ajusta la imagen para que no exceda el ancho del contenedor */
-    border-radius: 10px 10px 10px 10px; 
+    border-radius: 10px 10px 10px 10px;
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  
+
  .box .content h3{
+    font-size: 1vw;
     position: absolute;
     bottom:  0px;
     width: 100%;
@@ -120,51 +101,79 @@ a {
     text-align: center;
     border-radius: 0 0 10px 10px ;
     background-size: cover;
-    box-shadow: 0 -10px 50px rgba(0, 0, 0, .4); 
+    box-shadow: 0 -10px 50px rgba(0, 0, 0, .4);
  }
 
 /* parte responsive */
 
- @media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1075px) {
 
+  .box-container-2 {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1vw; 
+  }
+
+  .box{
+    max-width: 125vw;
+    max-height: 250.5vh;
+  } 
+
+
+}
+
+
+@media only screen and (max-width: 1023px) {
+
+    .box-container-2 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1vw; 
+    }
+
+    .box{
+      max-width: 125vw;
+      max-height: 250.5vh;
+    } 
+
+
+}
+
+ 
+
+@media only screen and (max-width: 767px) {
+
+  /* sección responsive de los 3 populares */
     .box-container-1{
-      margin: 3.5vw;
       display: grid;
       grid-template-columns: repeat(1, minmax(0, 1fr));
-      gap: 1vw;      
+      gap: 1vw;
     }
 
     .box-3-popular-2-3 {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
+      max-width: 100%;
+
+    }
+
+    .box-3-popular-2 {
+      width: 100%;
+      height: 100%;
+    }
+    
+    
+    .box-3-popular-3 {
+      width: 100%;
+      height: 100%;
     }
 
 
+  /* sección responsive de cartas de los juegos */
     .box-container-2 {
-      margin: 3.5vw;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1vw; /* Espacio entre los elementos */
-    }
-
-    .box{
-      max-width: 125vw;
-      max-height: 250.5vh;
-    }
-
-    .box .content h3 {
-      font-size: 2  vw; /* Utilizando vw para un tamaño de fuente relativo al ancho de la vista */
-    }
-
-  }
-
-  @media only screen and (max-width: 767px)
-  {
-    .box-container-2 {
-      margin: 3.5vw;
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1vw; /* Espacio entre los elementos */
+      gap: 1vw; 
     }
 
     .box{
@@ -173,6 +182,7 @@ a {
     }
 
     .box .content h3 {
-      font-size: 2vw; /* Utilizando vw para un tamaño de fuente relativo al ancho de la vista */
+      font-size: 3vw; /* Utilizando vw para un tamaño de fuente relativo al ancho de la vista */
     }
+
   }

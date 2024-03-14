@@ -2,34 +2,40 @@
 {% load static %}
 {% block content %}
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="{%static 'unclewebapp\css\reset.css' %}">
 <link rel="stylesheet" href="{%static 'unclewebapp\css\style_detalle.css' %}">
 
 <main>
-    <div class="box_img">
-        <img src="{{detalle_juego.imagen.url}}" 
-        alt="{{id.nombre}}">
-    </div>
-    <div class="box_info">
-        <div class="box_name">
-            {{ detalle_juego.nombre }}
+    <div class="container-detalle">
+        <div class="box_img">
+            <img src="{{detalle_juego.img.url}}" 
+            alt="{{id.nombre}}">
         </div>
-        <div class="box_sinopsis">
-            {{ detalle_juego.sinopsis}}
-        </div>
-
-        <div class="box_download">
-            <a href="{{detalle_juego.url_descargar}}"  target="_blank">
-                <div class="btn_download">
-                Descargar
-
-                <img src="{% static 'unclewebapp/img/descargar.png' %}" 
-                alt="imagen-juego">
-
+        <div class="box_info">
+            <div class="container-text">
+                <div class="box_name">
+                    {{ detalle_juego.nombre }}
                 </div>
-            </a>
-        </div>  
+                <div class="box_sinopsis">
+                    {{ detalle_juego.sinopsis}}
+                </div>
+            </div>
+            <div class="box_download">
+                <a href="{{detalle_juego.url_descargar}}"  target="_blank">
+                    <div class="btn_download">
+                        Descargar
+                        <img src="{% static 'unclewebapp/img/descargar.png' %}" 
+                        alt="imagen-juego">
+                    </div>
+                </a>
+            </div>  
+        </div>
     </div>
-
 
 </main>      
 

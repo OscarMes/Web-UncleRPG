@@ -3,40 +3,56 @@
 
 {% block content %}
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="{%static 'unclewebapp\css\reset.css' %}">
 <link rel="stylesheet" href="{% static 'unclewebapp/css/style_inicio.css' %}">
 <section class="game_container">
     
+    <!-- 3 populares -->
+    <!-- contenedor izquierdo -->
     <div class="box-container-1">
-
-            <div class="box-3-popular-1">
-                <img src="{% static 'unclewebapp/img/popular1.png' %}" alt="">
-            </div>
-            <div class="box-3-popular-2-3">
-                <div class="box-3-popular-2">
-                    <img src="{% static 'unclewebapp/img/popular2.png' %}" alt="">
+       
+            <a href="{% url 'cursor:detalle' izquierda.fkidTrespopulares_idJuegos %}" >
+                <div class="box-3-popular-1">
+                    <img src="{{ izquierda.img.url }}" alt="">
                 </div>
-                <div class="box-3-popular-3">
-                    <img src="{% static 'unclewebapp/img/popular3.png' %}" alt="">
-                </div>
-            </div>
+            </a>
             
+        <!-- contenedor derecho -->
+        <div class="box-3-popular-2-3">
+            <!-- superior -->
+            <a href="{% url 'cursor:detalle' superior.fkidTrespopulares_idJuegos %}">
+                <div class="box-3-popular-2">
+                    <img src="{{ superior.img.url }}" alt="">
+                </div>
+            </a>
+            <!-- inferior -->
+            <a href="{% url 'cursor:detalle' inferior.fkidTrespopulares_idJuegos %}">
+                <div class="box-3-popular-3">
+                    <img src="{{ inferior.img.url }}" alt="">
+                </div>
+            </a>
+        </div>     
     </div>
 
+    <!-- 'Juegos agregados recientemente' -->
     <div class="box-container-2">
         <!-- bucle for para mostrar el contenido de la base de datos -->
         {% for juego in juegos %}
         <a href="{% url 'cursor:detalle' juego.nombre %}">
             <div class="box">
                 <div class="content">
-                    <img src="{{ juego.imagen.url}}" alt="{{ juego.nombre}}">
+                    <img src="{{ juego.img.url}}" alt="{{ juego.nombre }}">
                     <h3>{{juego.nombre}}</h3>
                 </div>
             </div>
         </a> 
         {% endfor %}    
-        
-
-       
     </div>   
 </section>
 
